@@ -5,6 +5,7 @@
   "scripts": {
     "ai-service": "tsx app/api/ai/server.ts",
     "build": "next build",
+    "check-env": "node -e \"console.log('SUPABASE_URL:', process.env.NEXT_PUBLIC_SUPABASE_URL ? 'Set' : 'Missing'); console.log('SUPABASE_ANON_KEY:', process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ? 'Set' : 'Missing');\"",
     "createsuperuser": "tsx scripts/manage.ts createsuperuser",
     "dev": "next dev",
     "lint": "next lint",
@@ -12,7 +13,8 @@
     "migrate": "tsx scripts/manage.ts migrate",
     "runserver": "npm run dev",
     "shell": "tsx scripts/manage.ts shell",
-    "start": "next start"
+    "start": "next start",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
