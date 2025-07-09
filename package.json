@@ -1,0 +1,49 @@
+{
+  "name": "movie-distribution-platform",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "ai-service": "tsx app/api/ai/server.ts",
+    "build": "next build",
+    "createsuperuser": "tsx scripts/manage.ts createsuperuser",
+    "dev": "next dev",
+    "lint": "next lint",
+    "makemigrations": "tsx scripts/manage.ts makemigrations",
+    "migrate": "tsx scripts/manage.ts migrate",
+    "runserver": "npm run dev",
+    "shell": "tsx scripts/manage.ts shell",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-alert-dialog": "^1.0.5",
+    "@radix-ui/react-avatar": "^1.0.4",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@supabase/supabase-js": "latest",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "fs": "latest",
+    "lucide-react": "^0.454.0",
+    "next": "14.2.16",
+    "path": "latest",
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.0",
+    "postcss": "^8.5",
+    "tailwindcss": "^3",
+    "tsx": "^4.0.0",
+    "typescript": "^5"
+  }
+}
