@@ -14,7 +14,8 @@
     "runserver": "npm run dev",
     "shell": "tsx scripts/manage.ts shell",
     "start": "next start",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "verify-setup": "tsx scripts/verify-setup.ts"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",

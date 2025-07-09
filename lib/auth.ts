@@ -1,5 +1,6 @@
 import { createClient } from "@supabase/supabase-js"
 import type { NextRequest } from "next/server"
+import { isSupabaseConfigured } from "@/lib/supabase"
 
 // Create a separate admin client for server-side operations
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL
@@ -23,6 +24,11 @@ export interface AuthUser {
 
 export async function getAuthUser(request: NextRequest): Promise<AuthUser | null> {
   try {
+    // Check if Supabase is configured
+    if (!isSupabaseConfigured()) {
+      return null
+    }
+
     const authHeader = request.headers.get("authorization")
     if (!authHeader?.startsWith("Bearer ")) {
       return null
